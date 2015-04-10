@@ -1,0 +1,8 @@
+{
+	"id": "nodebb-theme-material-design",
+	"hooks": [],
+	"scripts": [
+		"lib/material.js",
+		"lib/vendor/waves.min.js"
+	]
+}

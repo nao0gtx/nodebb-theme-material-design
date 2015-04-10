@@ -1,0 +1,24 @@
+{
+  "name": "nodebb-theme-material-design",
+  "version": "0.0.1",
+  "description": "Material Design theme for NodeBB",
+  "main": "theme.less",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pichalite/nodebb-theme-material-design"
+  },
+  "keywords": [
+    "nodebb",
+    "material",
+    "material design",
+    "theme",
+    "themes"
+  ],
+  "author": {
+    "name": "pichalite",
+    "email": "pichalite.com@gmail.com"
+  },
+  "bugs": {
+    "url": "https://github.com/pichalite/nodebb-theme-material-design/issues"
+  }
+}
