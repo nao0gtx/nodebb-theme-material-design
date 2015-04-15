@@ -5,12 +5,13 @@
 	<div class="alert alert-warning">
 		<strong>[[tags:no_tags]]</strong>
 	</div>
-	<!-- ENDIF !tags.length -->
+	<!-- ELSE -->
 	<div class="form-group">
 		<div class="fg-line">
 			<input class="form-control" type="text" id="tag-search" placeholder="[[global:search]]"/>
 		</div>
 	</div>
+	<!-- ENDIF !tags.length -->
 
 	<div class="category row">
 		<div class="col-md-12 clearfix tag-list" data-nextstart="{nextStart}">
