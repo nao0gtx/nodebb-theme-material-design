@@ -1,0 +1,109 @@
+.tab-content > .tab-pane {
+  height: 100%;
+}
+
+.list-material>li .list-action-left {
+	top:50%;
+}
+
+.list-material {
+	box-shadow: none;
+}
+
+.messages {
+  padding: 15px;
+}
+.messages .message {
+  position: relative;
+  margin: 10px 0;
+  overflow: hidden;
+}
+.messages .message .user-picture {
+  position: absolute;
+  left: 0;
+  top: 15px;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+}
+.messages .message .message-text {
+  position: relative;
+  float: right;
+  padding: 10px 20px;
+  border-radius: 25px;
+  margin-bottom: 2px;
+  font-size: 16px;
+  clear: both;
+}
+.messages .message .message-text:before,
+.messages .message .message-text:after {
+  border-radius: 100%;
+}
+.messages .message .message-text:first-child {
+  margin-top: 15px;
+}
+.messages .message .message-text:first-child:before,
+.messages .message .message-text:first-child:after {
+  content: '';
+  position: absolute;
+  top: 0px;
+  width: 40px;
+  height: 20px;
+  z-index: -1;
+}
+.messages .message.left {
+  -webkit-transform-origin: left;
+      -ms-transform-origin: left;
+          transform-origin: left;
+}
+.messages .message.left .message-text {
+  margin-right: 70px;
+  margin-left: 55px;
+  background-color: #f0f0f0;
+  color: rgba(0, 0, 0, 0.87);
+  float: left;
+}
+.messages .message.left .message-text:before {
+  left: -16px;
+  background-color: #f0f0f0;
+  border-radius: 0;
+}
+.messages .message.left .message-text:after {
+  top: -1px;
+  left: -50px;
+  background-color: #fff;
+  width: 50px;
+  height: 50px;
+}
+.messages .message.right {
+  -webkit-transform-origin: right;
+      -ms-transform-origin: right;
+          transform-origin: right;
+}
+.messages .message.right .user-picture {
+  left: auto;
+  right: 0;
+}
+.messages .message.right .message-text {
+  margin-left: 70px;
+  margin-right: 55px;
+  background-color: #2095f2;
+  color: #fff;
+  float: right;
+}
+.messages .message.right .message-text:before {
+  right: -16px;
+  border-radius: 0;
+  background-color: #2095f2;
+}
+.messages .message.right .message-text:after {
+  top: -1px;
+  right: -49px;
+  width: 50px;
+  height: 50px;
+  background-color: #fff;
+}
+.messages .message.animate {
+  -webkit-animation: display 0.5s cubic-bezier(0.55, 0, 0.1, 1) forwards;
+          animation: display 0.5s cubic-bezier(0.55, 0, 0.1, 1) forwards;
+}

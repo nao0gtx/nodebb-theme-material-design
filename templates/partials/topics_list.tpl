@@ -1,6 +1,6 @@
-<div class="lv-body" component="category" id="topics-container" data-nextstart="{nextStart}">
+<div class="lv-body" component="category" itemscope itemtype="http://www.schema.org/ItemList" id="topics-container" data-nextstart="{nextStart}">
 	<!-- BEGIN topics -->
-	<div component="category/topic" class="lv-item media<!-- IF topics.deleted --> deleted<!-- ENDIF topics.deleted --><!-- IF topics.unread --> unread<!-- ENDIF topics.unread -->" data-tid="{topics.tid}" data-cid="{topics.cid}">
+	<div component="category/topic" class="lv-item media<!-- IF topics.deleted --> deleted<!-- ENDIF topics.deleted --><!-- IF topics.unread --> unread<!-- ENDIF topics.unread -->" data-tid="{topics.tid}" data-cid="{topics.cid}" data-index="{topics.index}" itemprop="itemListElement">
 		<!-- IF showSelect -->
         <div class="checkbox pull-left">
             <label>
@@ -16,9 +16,10 @@
         	</a>
     	</div>
     	<div class="media-body">
-    		<div class="lv-title">
-    			<a href="{relative_path}/topic/{topics.slug}"><strong><!-- IF topics.pinned --><i class="fa fa-thumb-tack"></i><!-- ENDIF topics.pinned --> <!-- IF topics.locked --><i class="fa fa-lock"></i><!-- ENDIF topics.locked --></strong>
-					<span class="topic-title">{topics.title}
+    		<div class="lv-title" component="topic/header">
+    			<strong><i component="topic/pinned" class="fa fa-thumb-tack <!-- IF !topics.pinned -->hide<!-- ENDIF !topics.pinned -->"></i>
+				<i component="topic/locked" class="fa fa-lock <!-- IF !topics.locked -->hide<!-- ENDIF !topics.locked -->"></i></strong>
+				<a href="{relative_path}/topic/{topics.slug}"><span class="topic-title">{topics.title}</span>
 				</a>
 			</div>
 

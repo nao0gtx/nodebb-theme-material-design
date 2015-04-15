@@ -1,5 +1,5 @@
 <!-- IMPORT partials/account_menu.tpl -->
-<div class="account">
+<div class="account profile-view">
 	<div class="row">
 		<div class="col-md-5 account-block">
 			<div class="card profile-view">
@@ -21,9 +21,29 @@
                     </div>
                     
                     <ul class="pv-follow">
-                        <li>{reputation} [[global:reputation]]</li>
-                        <li>{postcount} [[global:posts]]</li>
-                        <li>{profileviews} [[user:profile_views]]</li>
+                        <li>
+                        	<span style="display:block;">{reputation}</span>
+                        	<span>[[global:reputation]]</span>
+                        </li>
+                        <li>
+                        	<span style="display:block;">{postcount}</span>
+                        	<span>[[global:posts]]</span>
+                        </li>
+                        <li>
+                        	<span style="display:block;">{profileviews}</span>
+                        	<span>[[user:profile_views]]</span>
+                        </li>
+                    </ul>
+
+                    <ul class="pv-follow">
+                    	<li>
+                    		<span class="human-readable-number account-bio-value" title="{followerCount}" style="display:block;">{followerCount}</span>
+							<span class="account-bio-label">[[user:followers]]</span>
+						</li>
+						<li>
+							<span class="human-readable-number account-bio-value"  title="{followingCount}" style="display:block;">{followingCount}</span>
+							<span class="account-bio-label">[[user:following]]</span>
+						</li> 
                     </ul>
                            
                 </div>
@@ -31,74 +51,47 @@
 
 			<div class="card">
 				<div class="card-body card-padding">
-					<ul>
-					
+
 					<!-- IF email -->
-					<li>
-					<span class="account-bio-label">[[user:email]]</span>
-					<span class="account-bio-value"><i class="fa fa-eye-slash {emailClass}" title="[[user:email_hidden]]"></i> {email}</span>
-					</li>
+					<div class="profile-label">[[user:email]]</div>
+					<div><i class="fa fa-eye-slash {emailClass}" title="[[user:email_hidden]]"></i> {email}</div>
 					<!-- ENDIF email -->
-					
+
 					<!-- IF fullname -->
-					<li>
-					<span class="account-bio-label">[[user:fullname]]</span>
-					<span class="account-bio-value">{fullname}</span>
-					</li>
+					<div class="profile-label">[[user:fullname]]</div>
+					<div>{fullname}</div>
 					<!-- ENDIF fullname -->
-					
+
 					<!-- IF websiteName -->
-					<li>
-					<span class="account-bio-label">[[user:website]]</span>
-					<span class="account-bio-value"><a href="{website}">{websiteName}</a></span>
-					</li>
+					<div class="profile-label">[[user:website]]</div>
+					<div><a href="{website}">{websiteName}</a></div>
 					<!-- ENDIF websiteName -->
-					
-					
+
 					<!-- IF location -->
-					<li>
-					<span class="account-bio-label">[[user:location]]</span>
-					<span class="account-bio-value">{location}</span>
-					</li>
+					<div class="profile-label">[[user:location]]</div>
+					<div>{location}</div>
 					<!-- ENDIF location -->
-					
-					
+
 					<!-- IF age -->
-					<li>
-					<span class="account-bio-label">[[user:age]]</span>
-					<span class="account-bio-value">{age}</span>
-					</li>
+					<div class="profile-label">[[user:age]]</div>
+					<div>{age}</div>
 					<!-- ENDIF age -->
-					
-					<li>
-					<span class="account-bio-label">[[user:followers]]</span>
-					<span class="human-readable-number account-bio-value" title="{followerCount}">{followerCount}</span>
-					</li>
-					<li>
-					<span class="account-bio-label">[[user:following]]</span>
-					<span class="human-readable-number account-bio-value"  title="{followingCount}">{followingCount}</span>
-					</li>
-					<li>
-					<span class="account-bio-label">[[user:joined]]</span>
-					<span class="timeago account-bio-value" title="{joindate}"></span>
-					</li>
-					<li>
-					<span class="account-bio-label">[[user:lastonline]]</span>
-					<span class="timeago account-bio-value" title="{lastonline}"></span>
-					</li>
-					
+
+					<div class="profile-label">[[user:joined]]</div>
+					<div class="timeago account-bio-value" title="{joindate}"></div>
+
+					<div class="profile-label">[[user:lastonline]]</div>
+					<div class="timeago account-bio-value" title="{lastonline}"></div>
+
 					<!-- IF !disableSignatures -->
 					<!-- IF signature -->
 					<hr/>
-					<li>
-					<span class="account-bio-label">[[user:signature]]</span>
+					<div class="profile-label">[[user:signature]]</div>
 					<div class="post-signature">
 						<span id='signature'>{signature}</span>
 					</div>
-					</li>
 					<!-- ENDIF signature -->
 					<!-- ENDIF !disableSignatures -->
-					</ul>
 				</div>
 			</div>
 
@@ -141,10 +134,11 @@
 					<!-- BEGIN posts -->
 					<div class="timeline single">
 						<div class="frame">
-							<div class="timeline-badge">
+							<div class="timeline-badge" style="background-color:{posts.category.bgColor}; border-color:{posts.category.bgColor};">
 								<i class="fa {posts.category.icon}"></i>
 							</div>
-							<span class="timeline-date">[[global:posted_in_ago, <a href="{relative_path}/category/{posts.category.slug}"><i class="fa {posts.category.icon}"></i> {posts.category.name}</a>, <span class="timeago" title="{posts.relativeTime}"></span>]]</span>
+							<span class="timeline-date">[[global:posted_in_ago, <a href="{relative_path}/category/{posts.category.slug}"><i class="fa {posts.category.icon}"></i> {posts.category.name}</a>, <span class="timeago" title="{posts.relativeTime}"></span>]] &bull;
+							<a href="{relative_path}/topic/{posts.topic.slug}/{posts.index}">[[global:read_more]]</a></span>
 							<div class="timeline-content">
 								<p>{posts.content}</p>
 							</div>

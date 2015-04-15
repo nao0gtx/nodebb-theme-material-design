@@ -13,7 +13,6 @@
 					{categories.name} </a>
 					<small style="color:{categories.bgColor};">{categories.description}</small>
 				</h2>
-				
 				<ul class="actions">
                     <li>
                         <i class="fa fa-book"></i>{categories.topic_count}
@@ -22,8 +21,6 @@
                         <i class="fa fa-pencil"></i>{categories.post_count}
                     </li>
                 </ul>
-
-				
             </div>
 
             <div class="card-body card-padding">
@@ -36,9 +33,4 @@
 		</div>
 	</div>
 	<!-- END categories -->
-	<!-- IF loggedIn -->
-	<div class="floating-button">
-		<button id="new_topic" class="btn bgm-cyan btn-float"><i class="fa fa-plus"></i></button>    
-	</div>
-	<!-- ENDIF loggedIn -->
 </div>

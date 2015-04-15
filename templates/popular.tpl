@@ -15,68 +15,19 @@
         <li><a href="{relative_path}/popular/alltime" role="tab" data-toggle="tab">[[recent:alltime]]</a></li>
     </ul>-->
 
-	<div class="category">
-		<!-- IF !topics.length -->
-		<div class="alert alert-warning" id="category-no-topics">
-			<strong>[[recent:no_popular_topics]]</strong>
-		</div>
-		<!-- ELSE -->
-
-		<div class="card">
-			<div class="listview lv-bordered lv-lg">
-				<div class="lv-header-alt">
-			        <h2 class="lvh-label hidden-xs">[[global:header.popular]]</h2>
-			        
-			        <ul class="lv-actions actions">
-			            <li>
-			                <a href="">
-			                    <i class="fa fa-fw fa-clock-o"></i>
-			                </a>
-			            </li>
-			            <li class="dropdown">
-			                <a href="" data-toggle="dropdown" aria-expanded="true">
-			                    <i class="fa fa-fw fa-sort"></i>
-			                </a>
-			    
-			                <ul class="dropdown-menu dropdown-menu-right">
-			                    <li>
-			                        <a href="">Last Modified</a>
-			                    </li>
-			                    <li>
-			                        <a href="">Last Edited</a>
-			                    </li>
-			                    <li>
-			                        <a href="">Name</a>
-			                    </li>
-			                    <li>
-			                        <a href="">Date</a>
-			                    </li>
-			                </ul>
-			            </li>
-			            <li>
-			                <a href="">
-			                    <i class="fa fa-fw fa-info-circle"></i>
-			                </a>
-			            </li>
-			            <li class="dropdown">
-			                <a href="" data-toggle="dropdown" aria-expanded="true">
-			                    <i class="fa fa-fw fa-ellipsis-v"></i>
-			                </a>
-			    
-			                <ul class="dropdown-menu dropdown-menu-right">
-			                    <li>
-			                        <a href="">Refresh</a>
-			                    </li>
-			                    <li>
-			                        <a href="">Listview Settings</a>
-			                    </li>
-			                </ul>
-			            </li>
-			        </ul>
-			    </div>
-				<!-- IMPORT partials/topics_list.tpl -->
+	<div class="card">
+		<div class="listview lv-bordered lv-lg">
+			<div class="lv-header-alt">
+				<div class="title">
+		        	[[global:header.popular]]
+		        </div>
+		    </div>
+		    <!-- IF !topics.length -->
+			<div class="alert alert-warning" id="category-no-topics">
+				<strong>[[recent:no_popular_topics]]</strong>
 			</div>
+			<!-- ENDIF !topics.length -->
+			<!-- IMPORT partials/topics_list.tpl -->
 		</div>
-		<!-- ENDIF !topics.length -->
 	</div>
 </div>

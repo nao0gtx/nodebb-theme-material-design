@@ -5,28 +5,36 @@
 			<div class="card">
 				<div class="listview lv-bordered lv-lg">
 					<div class="lv-header-alt">
+						<div class="title">
 						<i class="fa fa-thumb-tack <!-- IF !pinned -->hidden<!-- ENDIF !pinned -->"></i> <i class="fa fa-lock <!-- IF !locked -->hidden<!-- ENDIF !locked -->"></i> <span class="topic-title" component="topic/title">{title}</span>
 						<ul class="lv-actions actions">
-							<li class="dropdown">
-								<a href="" data-toggle="dropdown" aria-expanded="true">
-									<i class="fa fa-sort"></i>
-								</a>
-								<ul class="dropdown-menu dropdown-menu-right">
-									<li>
-										Modified
-									</li>
-								</ul>
+							<!-- IMPORT partials/topic/sort.tpl -->
+							<li>
+							    <span component="topic/follow" class="hidden-xs hidden-sm <!-- IF isFollowing -->hidden<!-- ENDIF isFollowing -->">
+									<i class="fa fa-eye"></i>
+								</span>
+
+								<span component="topic/unfollow" class="hidden-xs hidden-sm <!-- IF !isFollowing -->hidden<!-- ENDIF !isFollowing -->">
+									<i class="fa fa-eye-slash"></i>
+								</span>
 							</li>
+							
 						</ul>
+						</div>
 					</div>
 					<div class="lv-body">
-					<!-- BEGIN posts -->
-					<!-- IMPORT partials/topic/post.tpl -->
-					<!-- END posts -->
+						<div class="lv-item media" component="topic" data-tid="{tid}">
+							<!-- BEGIN posts -->
+							<!-- IMPORT partials/topic/post.tpl -->
+							<!-- END posts -->
+						</div>
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
+	<!-- IF config.usePagination -->
+		<!-- IMPORT partials/paginator.tpl -->
+	<!-- ENDIF config.usePagination -->
 </div>
 <!-- IMPORT partials/variables/topic.tpl -->

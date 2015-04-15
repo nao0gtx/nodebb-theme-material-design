@@ -1,4 +1,4 @@
-<div class="row">
+<div class="row groups">
 	<div class="col-lg-4">
 		<!-- IF allowGroupCreation -->
 		<button class="btn btn-primary" data-action="new"><i class="fa fa-plus"></i> [[groups:new_group]]</button>
@@ -19,13 +19,14 @@
 				<div class="fg-line">
 				<input type="text" class="form-control" placeholder="Search" name="query" value="" id="search-text">
 				</div>
-				<span id="search-button" class="input-group-addon search-button"><i class="fa fa-search"></i></span>
+				<span id="search-button" class="input-group-addon last"><i class="fa fa-search"></i></span>
 			</div>
+			
 		</div>
 	</div>
 </div>
 
-<div class="groups list row" id="groups-list">
+<div component="groups/container" class="groups list row" id="groups-list">
 	<!-- IF groups.length -->
 	<!-- IMPORT partials/groups/list.tpl -->
 	<!-- ELSE -->
