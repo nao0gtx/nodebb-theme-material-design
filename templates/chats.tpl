@@ -18,7 +18,7 @@
             <!-- END chats -->     
         </div>
     </div>
-    
+    <!-- IF meta -->
     <div class="ms-body expanded-chat" data-uid="{meta.uid}" data-username="{meta.username}">
         <div class="listview lv-message">
             <div class="lv-body chat-content">
@@ -32,4 +32,9 @@
             </div>
         </div>
     </div>
+    <!-- ELSE -->
+    <div class="alert alert-info">
+        [[modules:chat.no-messages]]
+    </div>
+    <!-- ENDIF meta -->
 </div>
