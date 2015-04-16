@@ -1,7 +1,7 @@
 <div class="block-header">
     <h4>Chats</h4>
 </div>
-
+<!-- IF meta -->
 <div class="card" id="messages-main">
     <div class="ms-menu">        
         <div class="chats-list listview lv-user m-t-20">                                
@@ -18,7 +18,7 @@
             <!-- END chats -->     
         </div>
     </div>
-    <!-- IF meta -->
+    
     <div class="ms-body expanded-chat" data-uid="{meta.uid}" data-username="{meta.username}">
         <div class="listview lv-message">
             <div class="lv-body chat-content">
@@ -32,9 +32,9 @@
             </div>
         </div>
     </div>
-    <!-- ELSE -->
-    <div class="alert alert-info">
-        [[modules:chat.no-messages]]
-    </div>
-    <!-- ENDIF meta -->
 </div>
+<!-- ELSE -->
+<div class="alert alert-info">
+    [[modules:chat.no-messages]]
+</div>
+<!-- ENDIF meta -->
