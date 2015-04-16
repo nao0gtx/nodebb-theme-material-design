@@ -1,7 +1,11 @@
 <div class="block-header">
     <h4>Chats</h4>
 </div>
-<!-- IF meta -->
+<!-- IF !meta -->
+<div class="alert alert-info">
+    [[modules:chat.no-messages]]
+</div>
+<!-- ELSE -->
 <div class="card" id="messages-main">
     <div class="ms-menu">        
         <div class="chats-list listview lv-user m-t-20">                                
@@ -32,9 +36,5 @@
             </div>
         </div>
     </div>
-</div>
-<!-- ELSE -->
-<div class="alert alert-info">
-    [[modules:chat.no-messages]]
 </div>
 <!-- ENDIF meta -->
