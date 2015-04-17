@@ -1,6 +1,6 @@
 <div class="categories row">
 	<!-- BEGIN categories -->
-	<div class="c-item col-md-4 col-sm-6">
+	<div class="category-item col-md-4 col-sm-6 col-xs-12">
 		<div class="card">
 			<meta itemprop="name" content="{categories.name}">
 			<div class="card-header ch-alt">
