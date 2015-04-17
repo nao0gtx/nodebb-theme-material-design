@@ -130,9 +130,6 @@
             <!-- ENDIF loggedIn -->
             </ul>
         </li>
-        <li component="navbar/title" class="navbar-title pull-right hidden-xs">
-            <span></span>
-        </li>
     </ul>
     
 </header>
