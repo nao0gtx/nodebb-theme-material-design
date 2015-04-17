@@ -10,7 +10,9 @@
 					<!-- ELSE -->
 					<a href="{relative_path}/category/{categories.slug}" itemprop="url" style="color:{categories.bgColor};">
 					<!-- ENDIF categories.link-->
-					{categories.name} </a>
+					{categories.name} <!-- IF categories.icon -->
+							<i class="fa {categories.icon} fa-fw"></i>
+							<!-- ENDIF categories.icon --></a>
 					<small style="color:{categories.bgColor};">{categories.description}</small>
 				</h2>
 				<ul class="actions">
