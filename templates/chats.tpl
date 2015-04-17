@@ -54,11 +54,7 @@
                     </div>
                 </div>
             </div>
-
-
-
-        </div>     
-        
+        </div> 
     </div>
     
     <div class="ms-body expanded-chat" data-uid="{meta.uid}" data-username="{meta.username}">
