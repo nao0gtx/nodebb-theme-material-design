@@ -41,8 +41,16 @@ ul {
 	position:relative
 }
 
-body #content {
-	padding:15px 0;
+@media (min-width: 768px) {
+	body #content {
+		padding:15px 0;
+	}
+}
+
+@media (max-width: 767px) {
+	body #content {
+		padding:15px;
+	}
 }
 
 @media (min-width:1200px) {
