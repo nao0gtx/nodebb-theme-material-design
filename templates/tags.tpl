@@ -13,7 +13,7 @@
 	</div>
 	<!-- ENDIF !tags.length -->
 
-	<div class="category row">
+	<div class="row">
 		<div class="col-md-12 clearfix tag-list" data-nextstart="{nextStart}">
 			<!-- IMPORT partials/tags_list.tpl -->
 		</div>

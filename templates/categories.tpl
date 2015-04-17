@@ -1,4 +1,4 @@
-<div class="row">
+<div class="categories row">
 	<!-- BEGIN categories -->
 	<div class="col-md-4 col-sm-6">
 		<div class="card">
@@ -24,9 +24,16 @@
             </div>
 
             <div class="card-body card-padding">
-				<!-- BEGIN posts -->
-            	<div class="content">
-					<a href="{relative_path}/topic/{categories.posts.topic.slug}">{categories.posts.topic.title}</a>
+				<!-- BEGIN posts -->				
+				<div class="content">
+					<div class="pull-left hidden-xs">
+			        	<a href="{relative_path}/user/{categories.posts.user.userslug}">
+			            	<img class="user-picture" src="{categories.posts.user.picture}" title="{categories.posts.user.username}">
+			        	</a>
+			    	</div>
+					<div class="topic-content">
+						<a href="{relative_path}/topic/{categories.posts.topic.slug}">{categories.posts.topic.title}</a>
+					</div>
 				</div>
 				<!-- END posts -->
 			</div>
