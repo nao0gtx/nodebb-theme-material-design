@@ -7,7 +7,7 @@
                     <img src="{picture}" class="pv-main" alt="">
                 </div>               
                 <div class="pv-body">
-                    <span><i component="user/status" class="fa fa-circle status {status}" title="[[global:{status}]]"></i>{username}</span>
+                    <span><i component="user/status" class="fa fa-circle status {status}" title="[[global:{status}]]"></i> {username}</span>
                 
                     <div class="pv-contact">
                         <!-- IF !isSelf -->
@@ -98,7 +98,7 @@
 			<!-- IF groups.length -->
 			<div class="card">
 				<div class="card-header ch-alt">
-					[[groups:groups]]
+					<i class="fa fa-group"></i> [[groups:groups]]
 				</div>
 				<div class="card-body card-padding">
 				<!-- BEGIN groups -->
@@ -111,7 +111,7 @@
 			<!-- IF ips.length -->
 			<div class="card">
 				<div class="card-header ch-alt">
-					[[global:recentips]]
+					<i class="fa fa-laptop"></i> [[global:recentips]]
 				</div>
 				<div class="card-body card-padding">
 				<!-- BEGIN ips -->
@@ -125,7 +125,7 @@
 		<div class="col-md-7 user-recent-posts" data-nextstart="{nextStart}">
 			<div class="card">
 				<div class="card-header ch-alt">
-					[[global:recentposts]]
+					<i class="fa fa-edit"></i> [[global:recentposts]]
 				</div>
 				<div class="card-body card-padding">
 					<!-- IF !posts.length -->

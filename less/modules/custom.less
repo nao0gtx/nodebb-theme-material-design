@@ -9,11 +9,6 @@ a:hover, a:active, a:focus, a:visited {
 	margin-top:20px
 }
 
-
-/*#l-register {
-	width:600px;
-}*/
-
 .btn-default:hover, .btn-default:focus, .btn-default.focus, .btn-default:active, .btn-default.active, .open>.dropdown-toggle.btn-default {
 	color:#333;
 	background-color:#fff;
@@ -100,10 +95,6 @@ a:hover, a:active, a:focus, a:visited {
 	margin-top: 70px;
 }
 
-.status {
-	margin-right: 2px;
-}
-
 .status.online {
 	color: #060;
 }
@@ -125,12 +116,14 @@ a:hover, a:active, a:focus, a:visited {
 }
 
 .topic .topic-title {
-	font-size: 18px;
+	font-size: 16px;
 }
 
 .topic .post-tools {
 	text-transform: lowercase;
 	margin: 3px;
+	font-size: 12px;
+	padding-left: 10px;
 }
 
 .navbar-title {
@@ -205,6 +198,7 @@ a:hover, a:active, a:focus, a:visited {
   right: 20px;
   top: 70px;
 }
+
 .alert-window {
   position: fixed;
   width: 300px;
@@ -214,7 +208,6 @@ a:hover, a:active, a:focus, a:visited {
 #chat-list ul {
 	list-style: none;
 }
-
 
 .user-picture {
 	border-radius: 50%;
@@ -491,17 +484,15 @@ a:hover, a:active, a:focus, a:visited {
 }
 
 @media (max-width: 767px) {
-	.listview .lv-title {
+	.listview .lv-title, .listview .lv-item .lv-small {
 		white-space: inherit;
 	}	
 }
 
-@media (max-width: 767px) {
-	.listview .lv-item .lv-small {
-		white-space: inherit;
-	}
-}
-
 .nav>li>a {
 	padding: 10px 10px;
+}
+
+.profile-view .card-header {
+	text-align: left;
 }
