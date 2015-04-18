@@ -414,6 +414,10 @@ a:hover, a:active, a:focus, a:visited {
 	margin: 0;
 }
 
+.lv-body.chat-content {
+	padding-left: 0px;
+}
+
 .expanded-chat .lv-message .chat-content {
 	overflow-y: auto;
 	resize: none;
@@ -484,4 +488,20 @@ a:hover, a:active, a:focus, a:visited {
 .categories .category-item {
   	height: auto;
   	margin-right: -5px;
+}
+
+@media (max-width: 767px) {
+	.listview .lv-title {
+		white-space: inherit;
+	}	
+}
+
+@media (max-width: 767px) {
+	.listview .lv-item .lv-small {
+		white-space: inherit;
+	}
+}
+
+.nav>li>a {
+	padding: 10px 10px;
 }

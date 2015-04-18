@@ -1,6 +1,8 @@
-<div class="lv-body" component="category" itemscope itemtype="http://www.schema.org/ItemList" id="topics-container" data-nextstart="{nextStart}">
+<div class="lv-body" component="category" itemscope itemtype="http://www.schema.org/ItemList" data-nextstart="{nextStart}">
+	<meta itemprop="itemListOrder" content="descending">
 	<!-- BEGIN topics -->
-	<div component="category/topic" class="lv-item media<!-- IF topics.deleted --> deleted<!-- ENDIF topics.deleted --><!-- IF topics.unread --> unread<!-- ENDIF topics.unread -->" data-tid="{topics.tid}" data-cid="{topics.cid}" data-index="{topics.index}" itemprop="itemListElement">
+	<div component="category/topic" class="lv-item media row clearfix {function.generateTopicClass}" <!-- IMPORT partials/data/category.tpl -->>
+		<meta itemprop="name" content="{function.stripTags, title}">
 		<!-- IF showSelect -->
         <div class="checkbox pull-left">
             <label>
