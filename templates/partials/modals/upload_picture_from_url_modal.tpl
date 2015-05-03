@@ -13,8 +13,8 @@
 				</div>
 			</div>
 			<div class="modal-footer">
-				<button class="btn btn-link" data-dismiss="modal" aria-hidden="true">Close</button>
-				<button class="btn btn-link upload-btn">[[user:upload_picture]]</button>
+				<button class="btn btn-link btn-default" data-dismiss="modal" aria-hidden="true">Close</button>
+				<button class="btn btn-link btn-primary upload-btn">[[user:upload_picture]]</button>
 			</div>
 		</div>
 	</div>

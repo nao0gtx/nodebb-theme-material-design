@@ -1,6 +1,9 @@
 {
   "name": "nodebb-theme-material-design",
   "version": "0.0.1",
+  "nbbpm": {
+    "compatibility": "^0.7.0"
+  },
   "description": "Material Design theme for NodeBB",
   "main": "theme.less",
   "repository": {
@@ -20,5 +23,12 @@
   },
   "bugs": {
     "url": "https://github.com/pichalite/nodebb-theme-material-design/issues"
-  }
+  },
+  "readme": "ERROR: No README data found!",
+  "homepage": "https://github.com/pichalite/nodebb-theme-material-design",
+  "_id": "nodebb-theme-material-design@0.0.1",
+  "scripts": {},
+  "_shasum": "3a9a058a4f56947ce669bb0a771c936766320879",
+  "_from": "..\\nodebb-theme-material-design-master",
+  "_resolved": "file:..\\nodebb-theme-material-design-master"
 }

@@ -1,6 +1,6 @@
 <ul class="pagination lv-pagination">
     <li class="<!-- IF !pagination.prev.active --> disabled<!-- ENDIF !pagination.prev.active -->">
-        <a href="?page={pagination.prev.page}" aria-label="Previous">
+        <a href="?{pagination.prev.qs}" data-page="{pagination.prev.page}" aria-label="Previous">
             <i class="fa fa-chevron-left"></i>
         </a>
     </li>
@@ -12,7 +12,7 @@
     <!-- END pages -->
 
     <li class="<!-- IF !pagination.next.active --> disabled<!-- ENDIF !pagination.next.active -->">
-        <a href="?page={pagination.next.page}" aria-label="Next">
+        <a href="?{pagination.next.qs}" data-page="{pagination.next.page}" aria-label="Next">
             <i class="fa fa-chevron-right"></i>
         </a>
     </li>

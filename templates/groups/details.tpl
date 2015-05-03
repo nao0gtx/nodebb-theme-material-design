@@ -94,10 +94,8 @@
 		<!-- IF group.isOwner -->
 		<div class="card">
 			<div class="card-header ch-alt pointer" data-toggle="collapse" data-target=".options">
-				
 					<i class="fa fa-caret-down pull-right"></i>
-					<i class="fa fa-cogs"></i> [[groups:details.owner_options]]
-				
+					<i class="fa fa-cogs"></i> [[groups:details.owner_options]]			
 			</div>
 
 			<div class="card-body card-padding options collapse">

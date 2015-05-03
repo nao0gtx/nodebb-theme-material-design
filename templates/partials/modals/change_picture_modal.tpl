@@ -27,8 +27,8 @@
 					<!-- ENDIF config.allowProfileImageUploads -->
             </div>
             <div class="modal-footer">
-                <button class="btn btn-link" data-dismiss="modal" aria-hidden="true">[[global:close]]</button>
-				<button id="savePictureChangesBtn" class="btn btn-link">[[global:save_changes]]</button>
+                <button class="btn btn-link btn-default" data-dismiss="modal" aria-hidden="true">[[global:close]]</button>
+				<button id="savePictureChangesBtn" class="btn btn-link btn-primary">[[global:save_changes]]</button>
             </div>
         </div>
     </div>

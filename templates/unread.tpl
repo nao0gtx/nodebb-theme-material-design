@@ -5,14 +5,13 @@
 		<div class="alert alert-warning hide" id="new-topics-alert"></div>
 	</a>
 
-	<!-- IF topics.length -->
 	<div class="category row">
 		<div class="col-md-12">
 			<div class="card">
-				<div class="listview lv-bordered lv-lg">
+				<div class="listview lv-bordered lv-lg <!-- IF !topics.length -->hidden<!-- ENDIF !topics.length -->">
 					<div class="lv-header-alt">
 						<div class="title">
-					        <div class="markread btn-group <!-- IF !topics.length -->hidden<!-- ENDIF !topics.length -->">
+					        <div class="markread btn-group">
 								<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
 									[[unread:mark_as_read]] <span class="caret"></span>
 								</button>
@@ -30,15 +29,16 @@
 							</div>
 						</div>
 				    </div>
-			<!-- IMPORT partials/topics_list.tpl -->
+
+					<!-- IMPORT partials/topics_list.tpl -->
+					<button id="load-more-btn" class="btn btn-primary hide">[[unread:load_more]]</button>
+				</div>
+				<div id="category-no-topics" class="alert alert-warning <!-- IF topics.length -->hidden<!-- ENDIF topics.length -->">
+					<strong>[[unread:no_unread_topics]]</strong>
+				</div>
 			</div>
-			</div>
-			<button id="load-more-btn" class="btn btn-primary hide">[[unread:load_more]]</button>
+
 		</div>
 	</div>
-	<!-- ELSE -->
-	<div id="category-no-topics" class="alert alert-warning">
-		<strong>[[unread:no_unread_topics]]</strong>
-	</div>
-	<!-- ENDIF topics.length -->
+
 </div>

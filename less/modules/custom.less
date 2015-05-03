@@ -16,7 +16,6 @@ a:hover, a:active, a:focus, a:visited {
 }
 
 .lv-actions>ul {
-	list-style:none;
 	font-size:14px
 }
 
@@ -38,7 +37,7 @@ a:hover, a:active, a:focus, a:visited {
 	line-height: 0px;
 }
 
-.media-body .lv-attrs span {
+.media-body .lv-attrs .tag-item {
 	margin-right:5px;
 }
 
@@ -87,10 +86,6 @@ a:hover, a:active, a:focus, a:visited {
 	margin-bottom: 10px;
 }
 
-.account-username-box li {
-	list-style: none;
-}
-
 .card.profile-view {
 	margin-top: 70px;
 }
@@ -109,10 +104,6 @@ a:hover, a:active, a:focus, a:visited {
 
 .status.offline {
 	color: gray;
-}
-
-.card-body ul {
-	list-style: none;
 }
 
 .topic .topic-title {
@@ -148,7 +139,6 @@ a:hover, a:active, a:focus, a:visited {
 }
 
 .groups.list .members {
-	list-style: none;
 	padding-left: 0;
 	list-style-type: none;
 }
@@ -205,10 +195,6 @@ a:hover, a:active, a:focus, a:visited {
   z-index: 10002;
 }
 
-#chat-list ul {
-	list-style: none;
-}
-
 .user-picture {
 	border-radius: 50%;
 }
@@ -258,34 +244,6 @@ a:hover, a:active, a:focus, a:visited {
 	width: 100px;
 }
 
-#notif-list {
-	padding: 10px;
-}
-
-#notif-list img {
-	border-radius: 50%;
-	width: 40px;
-	height: 40px;
-}
-
-#header #notif-list li .mark-read {
-  color: #777;
-}
-
-#header #notif-list li .mark-read:after {
-  font-family: "FontAwesome";
-  content: "\f10c";
-  padding: 4px 1rem;
-  position: relative;
-  top: 1px;
-}
-
-#header .notif-dropdown-link a {
-  display: block;
-  text-align: center;
-  padding: .5em 0;
-  font-weight: 600;
-}
 
 #chat-list {
 	padding: 10px;
@@ -297,8 +255,8 @@ a:hover, a:active, a:focus, a:visited {
 
 #chat-list img {
 	border-radius: 50%;
-	width: 40px;
-	height: 40px;
+	width: 32px;
+	height: 32px;
 	margin-right: 10px;
 }
 
@@ -356,7 +314,6 @@ a:hover, a:active, a:focus, a:visited {
 
 .listview .lv-attrs>li {
 	border-radius: 10px;
-	padding: 5px 5px 5px 10px;
 }
 
 .post-tools a {
@@ -369,8 +326,8 @@ a:hover, a:active, a:focus, a:visited {
 }
 
 .thread_active_users a img {
-	width: 32px;
-	height: 32px;
+	width: 25px;
+	height: 25px;
 	border-radius: 50%;
 }
 
@@ -378,7 +335,7 @@ a:hover, a:active, a:focus, a:visited {
   text-transform: uppercase;
   color: #777;
   font-size: 12px;
-  margin-top: 8px;
+  margin: 0px;
 }
 
 .groups .input-group #search-button {
@@ -399,12 +356,17 @@ a:hover, a:active, a:focus, a:visited {
 	font-size: 14px;
 }
 
-.lv-item.media.deleted {
+.lv-item.media.deleted, .timeline.single.deleted .timeline-content {
 	opacity: 0.3;
 }
 
-.chat-content p {
+.chat-message p {
 	margin: 0;
+}
+
+.chat-footer {
+	padding-top: 20px;
+	border-top: 1px solid #f0f0f0;
 }
 
 .lv-body.chat-content {
@@ -495,4 +457,308 @@ a:hover, a:active, a:focus, a:visited {
 
 .profile-view .card-header {
 	text-align: left;
+}
+
+@media (min-width:480px) {
+	.listview .lv-item .timeline-date .lv-actions {
+		top: 20px;
+		right: -15px;
+	}
+	.listview .lv-item .timeline-date .lv-actions .moderator-tools>span {
+		display: block;
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+	.listview .lv-item .lv-actions.post-bar {
+		right: -5px;
+	}
+}
+
+.timeline.single .status {
+	font-size: 12px;
+}
+
+.timeline.single .lv-actions .reply-button {
+	vertical-align: top;
+}
+
+.timeline.single .lv-actions .thread-tools {
+	vertical-align: top;
+	padding: 5px 5px;
+}
+
+.timeline.single .lv-actions .post-count, .timeline.single .lv-actions .view-count {
+	text-align: center;
+	padding-right: 10px;
+}
+
+.timeline.single .actions>li>a>i {
+	font-size: 16px;
+}
+
+.tools-title {
+	margin-left: 10px;
+	font-size: 11px;
+}
+
+#results .user-picture {
+	width: 30px;
+	height: 30px;
+}
+
+#results .lv-header-alt {
+	background-color: inherit;
+	padding: 12px;
+	border: none;
+}
+
+.search-result-text {
+  max-height: 250px;
+  overflow: hidden;
+  position: relative;
+}
+
+.fade-out {
+  position: absolute;
+  top: 190px;
+  left: 0;
+  width: 100%;
+  margin: 0;
+  padding: 30px 0;
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, transparent), color-stop(1, white));
+  background-image: -webkit-linear-gradient(top, rgba(255,255,255,0), white);
+  background-image: -moz-linear-gradient(top, rgba(255,255,255,0), white);
+  background-image: -ms-linear-gradient(top, transparent, white);
+  background-image: -o-linear-gradient(top, transparent, white);
+}
+
+.topic .post-bar.timeline.single {
+	padding-bottom: 30px;
+}
+
+.topic .post-bar.timeline.single .frame {
+	margin-left: 50px;
+	width: ~"calc(100% - 50px)";
+}
+
+@media (max-width: 767px) {
+	.topic .post-bar.timeline.single .frame {
+		width: ~"calc(100% - 30px)";
+	}
+}
+
+.topic .tags .tag-container {
+	font-size: 13px;
+}
+
+.topic .post-bar .lv-actions.actions, .timeline.single .lv-actions.actions {
+	z-index: inherit;
+}
+
+.container.footer {
+	margin-top: 20px;
+}
+
+.chat-modal #chat-content {
+	height: 250px;
+ 	overflow-y: auto;
+	resize: none;
+	word-wrap: break-word;
+	padding: 0px;
+	margin-top: 10px;
+}
+
+.chat-modal .status {
+	font-size: 14px;
+}
+
+.btn-link.btn-default {
+	color: #333;
+}
+
+.btn-link.btn-default:hover {
+	background-color: rgba(0, 0, 0, 0.07);
+}
+
+.btn-link.btn-primary {
+	color: #2196f3;
+}
+
+.btn-link.btn-primary:hover {
+	background-color: rgba(0, 0, 0, 0.07);
+}
+
+.btn-link.btn-warning {
+	color: #ff9800;
+}
+
+.btn-link.btn-warning:hover {
+	background-color: rgba(0, 0, 0, 0.07);
+}
+
+.btn-link.btn-danger {
+	color: #f44336;
+}
+
+.btn-link.btn-danger:hover {
+	background-color: rgba(0, 0, 0, 0.07);
+}
+
+#notif-list .unread {
+	background-color: #40C4FF;
+}
+
+#notif-list .unread a {
+	color: #fff;
+}
+
+.users .users-box .user-info {
+	font-size: 13px;
+}
+
+.alert .alert-dismissable {
+	font-size: 14px;
+}
+
+
+.toggle-switch {
+	display:inline-block;
+	vertical-align:top;
+	-webkit-touch-callout:none;
+	-webkit-user-select:none;
+	-khtml-user-select:none;
+	-moz-user-select:none;
+	-ms-user-select:none;
+	user-select:none
+}
+
+.toggle-switch .ts-label {
+	display:inline-block;
+	margin:0 20px 0 0;
+	vertical-align:top;
+	-webkit-transition:color .56s cubic-bezier(0.4,0,.2,1);
+	transition:color .56s cubic-bezier(0.4,0,.2,1)
+}
+
+.toggle-switch .ts-helper {
+	display:inline-block;
+	position:relative;
+	width:40px;
+	height:16px;
+	border-radius:8px;
+	background:rgba(0,0,0,.26);
+	-webkit-transition:background .28s cubic-bezier(0.4,0,.2,1);
+	transition:background .28s cubic-bezier(0.4,0,.2,1);
+	vertical-align:middle;
+	cursor:pointer
+}
+
+.toggle-switch .ts-helper:before {
+	content:'';
+	position:absolute;
+	top:-4px;
+	left:-4px;
+	width:24px;
+	height:24px;
+	background:#fafafa;
+	box-shadow:0 2px 8px rgba(0,0,0,.28);
+	border-radius:50%;
+	webkit-transition:left .28s cubic-bezier(0.4,0,.2,1), background .28s cubic-bezier(0.4,0,.2,1), box-shadow .28s cubic-bezier(0.4,0,.2,1);
+	transition:left .28s cubic-bezier(0.4,0,.2,1), background .28s cubic-bezier(0.4,0,.2,1), box-shadow .28s cubic-bezier(0.4,0,.2,1)
+}
+
+.toggle-switch:not(.disabled) .ts-helper:active:before {
+	box-shadow:0 2px 8px rgba(0,0,0,.28), 0 0 0 20px rgba(128,128,128,.1)
+}
+
+.toggle-switch input {
+	position:absolute;
+	z-index:1;
+	width:46px;
+	margin:0 0 0 -4px;
+	height:24px;
+	opacity:0;
+	filter:alpha(opacity=0);
+	cursor:pointer
+}
+
+.toggle-switch input:checked+.ts-helper:before {
+	left:20px
+}
+
+.toggle-switch:not([data-ts-color]) input:not(:disabled):checked+.ts-helper {
+	background:rgba(33,150,243,.5);
+}
+
+.toggle-switch:not([data-ts-color]) input:not(:disabled):checked+.ts-helper:before {
+	background:#2196f3;
+}
+
+.toggle-switch:not([data-ts-color]) input:not(:disabled):checked+.ts-helper:active:before {
+	box-shadow:0 2px 8px rgba(0,0,0,.28),0 0 0 20px rgba(33,150,243,.2)
+}
+
+.toggle-switch.disabled {
+	opacity:.6;
+	filter:alpha(opacity=60)
+}
+
+#toggle-width {
+	margin-left: 50px;
+}
+
+.notifications .list-view .unread {
+  border-left: 2px solid #2196f3;
+}
+
+.lvh-label .alert {
+	margin-bottom: 0px;
+}
+
+@media (max-width: 767px) {
+	.lvh-label .alert {
+		margin-top: 5px;
+	}
+}
+
+.thread_active_users.active-users>div {
+	display: inherit;
+	margin-left: 2px;
+	text-transform: none;
+}
+
+@media (min-width: 768px) {
+	.notifications .listview.lv-lg .lv-item .media-body>a {
+		font-size: 14px;
+	}
+}
+
+@media (max-width: 767px) {
+	.notifications .listview.lv-lg .lv-item .media-body>a {
+		font-size: 13px;
+	}
+}
+
+@media (min-width: 480px) {
+	.notifications .listview.lv-lg .lv-item {
+		  padding: 10px 35px 10px 25px;
+	}	
+}
+
+@media (max-width: 767px) {
+	.notifications .listview.lv-lg .lv-item {
+		  padding: 10px 35px 10px 25px;
+	}	
+}
+
+.timeline.single .frame .post-edit {
+	margin-bottom: 20px;
+}
+
+.notifications h2 {
+	font-size: 20px;
+}
+
+.notifications .lv-title>a {
+	font-size: 14px;
 }

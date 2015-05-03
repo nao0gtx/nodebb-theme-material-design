@@ -27,7 +27,7 @@
 
             <div class="card-body card-padding">
 				<!-- BEGIN posts -->				
-				<div class="content">
+				<div component="category/posts" class="content">
 					<div class="pull-left hidden-xs">
 			        	<a href="{relative_path}/user/{categories.posts.user.userslug}">
 			            	<img class="user-picture" src="{categories.posts.user.picture}" title="{categories.posts.user.username}">
@@ -38,6 +38,7 @@
 					</div>
 				</div>
 				<!-- END posts -->
+				
 			</div>
 		</div>
 	</div>

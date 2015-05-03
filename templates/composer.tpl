@@ -23,14 +23,18 @@
 			<!-- ELSE -->
 			<div class="<!-- IF isTopic -->col-lg-9<!-- ELSE -->col-lg-12<!-- ENDIF isTopic --> col-md-12">
 				<!-- IF isTopicOrMain -->
+				<div class="fg-line">
 				<input class="title form-control" type="text" tabindex="1" placeholder="[[topic:composer.title_placeholder]]" value="{title}"/>
+				</div>
 				<!-- ELSE -->
 				<span class="title form-control">[[topic:composer.replying_to, "{title}"]]</span>
 				<!-- ENDIF isTopicOrMain -->
 			</div>
 			<!-- IF isTopic -->
 			<div class="category-list-container col-lg-3 col-md-12">
+				<div class="fg-line">
 				<select tabindex="3" class="form-control category-list"></select>
+				</div>
 			</div>
 			<!-- ENDIF isTopic -->
 			<!-- ENDIF showHandleInput -->

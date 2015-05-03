@@ -7,7 +7,7 @@
                     <img src="{picture}" class="pv-main" alt="">
                 </div>               
                 <div class="pv-body">
-                    <span><i component="user/status" class="fa fa-circle status {status}" title="[[global:{status}]]"></i> {username}</span>
+                    <span><i component="user/status" class="fa fa-circle status {status}" title="[[global:{status}]]"></i> <span class="account-username">{username}</span></span>
                 
                     <div class="pv-contact">
                         <!-- IF !isSelf -->

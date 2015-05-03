@@ -26,8 +26,8 @@
 				<div id="alert-error" class="alert alert-danger hide"></div>
 			</div>
 			<div class="modal-footer">
-				<button class="btn btn-link" data-dismiss="modal" aria-hidden="true">Close</button>
-				<button id="pictureUploadSubmitBtn" class="btn btn-link">[[user:upload_picture]]</button>
+				<button class="btn btn-link btn-default" data-dismiss="modal" aria-hidden="true">Close</button>
+				<button id="pictureUploadSubmitBtn" class="btn btn-link btn-primary">[[user:upload_picture]]</button>
 			</div>
 		</div><!-- /.modal-content -->
 	</div><!-- /.modal-dialog -->

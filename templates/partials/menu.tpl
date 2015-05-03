@@ -46,7 +46,7 @@
                 </a>
                 <ul class="dropdown-menu dropdown-menu-lg pull-right" aria-labelledby="notif_dropdown">
                     <li>
-                        <ul id="notif-list" class="list-material">
+                        <ul id="notif-list">
                             <li>
                                 <a href="#"><i class="fa fa-refresh fa-spin"></i> [[global:notifications.loading]]</a>
                             </li>
@@ -62,9 +62,9 @@
                 <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="chat_dropdown">
                     <i component="chat/icon" class="fa fa-comment-o fa-fw"></i>
                 </a>
-                <ul class="dropdown-menu dropdown-menu-lg pull-right" aria-labelledby="chat_dropdown">
+                <ul class="dropdown-menu pull-right" aria-labelledby="chat_dropdown">
                     <li>
-                        <ul id="chat-list" class="list-material">
+                        <ul id="chat-list">
                             <li>
                                 <a href="#"><i class="fa fa-refresh fa-spin"></i> [[global:chats.loading]]</a>
                             </li>
@@ -136,7 +136,13 @@
     <aside id="sidebar">
         <div class="sidebar-inner">
             <div class="si-inner">
-                <ul class="main-menu">        
+                <ul class="main-menu">
+                    <li id="toggle-width" class="hidden-xs">
+                        <div class="toggle-switch">
+                            <input id="tw-switch" type="checkbox" hidden="hidden">
+                            <label for="tw-switch" class="ts-helper"></label>
+                        </div>
+                    </li>        
 					<!-- BEGIN navigation -->
 					<!-- IF function.displayMenuItem, @index -->
 					<li class="{navigation.class}">

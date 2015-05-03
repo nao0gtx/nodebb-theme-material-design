@@ -31,4 +31,6 @@
 	<!-- ENDIF config.usePagination -->	
 </div>
 
+<!-- IMPORT partials/move_thread_modal.tpl -->
+<!-- IMPORT partials/noscript/paginator.tpl -->
 <!-- IMPORT partials/variables/category.tpl -->

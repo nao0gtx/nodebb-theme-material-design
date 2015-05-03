@@ -6,9 +6,9 @@
 		<div class="alert alert-warning">[[user:has_no_posts]]</div>
 	<!-- ELSE -->
 	<div class="row">
-		<div class="col-md-12 user-favourite-posts" data-nextstart="{nextStart}">
+		<div class="col-md-12">
 			<div class="card">
-				<div class="card-body card-padding">
+				<div class="card-body card-padding user-favourite-posts" data-nextstart="{nextStart}">
 					<!-- BEGIN posts -->
 					<div class="timeline single">
 						<div class="frame">
@@ -23,9 +23,6 @@
 						</div>
 					</div>
 					<!-- END posts -->
-					<div class="loading-indicator text-center hidden">
-						<i class="fa fa-refresh fa-spin"></i>
-					</div>
 				</div>
 			</div>
 		</div>

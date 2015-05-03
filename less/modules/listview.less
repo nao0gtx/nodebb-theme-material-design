@@ -10,11 +10,17 @@
 	.listview.lv-lg .lv-item {
 		padding:17px 35px 17px 25px
 	}
+	.category .listview.lv-lg .lv-item {
+		padding:10px 35px 10px 25px
+	}
 }
 
 @media (max-width:767px) {
 	.listview.lv-lg .lv-item {
 		padding:17px 35px 17px 20px
+	}
+	.category .listview.lv-lg .lv-item {
+		padding:10px 35px 10px 25px
 	}
 }
 
@@ -62,7 +68,7 @@
 @media (max-width:767px) {
 	.listview .lv-item .lv-actions {
 		right:7px;
-		top:10px
+		top:-10px
 	}
 }
 
@@ -219,4 +225,36 @@
 
 .listview:not(.lv-message) .lv-title {
 	color:#000
+}
+
+.listview .lv-footer {
+	min-height: 50px;
+}
+
+.listview .lv-footer .lv-actions {
+	position:absolute;
+}
+
+@media (min-width:480px) {
+	.listview .lv-footer .lv-actions {
+		right:25px;
+		height:30px;
+		margin-top:-15px;
+		top: ~"calc(100% - 25px)";
+	}
+}
+
+@media (max-width:767px) {
+	.listview .lv-footer .lv-actions {
+		right:7px;
+		top: ~"calc(100% - 25px)";
+	}
+}
+
+.listview .lv-footer .lv-small {
+	font-size:13px;
+	overflow:hidden;
+	text-overflow:ellipsis;
+	white-space:nowrap;
+	display:block;width:100%
 }

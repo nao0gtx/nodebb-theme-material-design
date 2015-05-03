@@ -312,6 +312,21 @@
 @screen-md-max:              (@screen-lg-min - 1);
 
 
+// Very Large screen / wide desktop
+//** Deprecated `@screen-lg` as of v3.0.1
+@screen-xlg:                  1600px;
+@screen-xlg-min:              @screen-xlg;
+//** Deprecated `@screen-lg-desktop` as of v3.0.1
+@screen-xlg-desktop:          @screen-xlg-min;
+
+// Very Large screen / wide desktop
+//** Deprecated `@screen-lg` as of v3.0.1
+@screen-xxlg:                  2100px;
+@screen-xxlg-min:              @screen-xxlg;
+//** Deprecated `@screen-lg-desktop` as of v3.0.1
+@screen-xxlg-desktop:          @screen-xxlg-min;
+
+
 //== Grid system
 //
 //## Define your custom responsive grid.
@@ -346,7 +361,8 @@
 //** For `@screen-lg-min` and up.
 @container-lg:                 @container-large-desktop;
 
-
+@container-xlg:                (400px + @container-large-desktop);
+@container-xxlg:               (900px + @container-large-desktop);
 //== Navbar
 //
 //##
